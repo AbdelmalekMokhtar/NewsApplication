@@ -1,0 +1,14 @@
+NewsApp is an Android application that allows users to fetch and display the latest news articles. 
+The app is built using modern Android development best practices, including Dependency Injection (with Dagger Hilt), Retrofit for networking, and the MVVM (Model-View-ViewModel) architecture pattern.
+
+Features Latest News: Fetches the latest news articles from a remote API using Retrofit. MVVM Architecture: Clean separation of concerns with the use of the MVVM pattern. Dependency Injection: Simplifies dependency management using Dagger Hilt. LiveData: Observes data changes and updates the UI in real-time. Coroutines: Handles asynchronous tasks efficiently with Kotlin Coroutines. Screenshots
+
+Architecture Overview The app follows the MVVM architecture pattern, which ensures a clear separation between the UI (View), business logic (ViewModel), and data (Model).
+
+Model: Contains data classes and repository. The repository handles data operations and abstracts the data source (e.g., remote API, local database).
+
+ViewModel: Provides data to the UI and acts as a bridge between the Model and View. It also handles user interactions and updates the UI using LiveData.
+
+View: The UI components, typically Activities or Fragments, that observe the ViewModel's LiveData and update the UI accordingly.
+
+Technologies Used Dagger Hilt: For Dependency Injection, making the app modular and testable. Retrofit: For making network requests to fetch news data from a REST API. Gson: For JSON parsing, used by Retrofit to deserialize the API responses. Kotlin Coroutines: For background processing and handling asynchronous tasks. LiveData: For observing data changes and updating the UI. Jetpack Compose (Optional): If you’re using Jetpack Compose for the UI layer.
